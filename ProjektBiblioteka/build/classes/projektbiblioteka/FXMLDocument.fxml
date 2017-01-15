@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projektbiblioteka.FXMLDocumentController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="622.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="179.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="256.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="160.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="312.0" minHeight="10.0" prefHeight="286.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="130.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="131.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="tableBooks" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3">
+               <columns>
+                  <TableColumn fx:id="tableNazwa" prefWidth="84.0" text="Nazwa" />
+                  <TableColumn fx:id="tableAutor" minWidth="9.0" prefWidth="123.0" text="Autor" />
+                  <TableColumn fx:id="tableDesc" prefWidth="153.0" text="Opis" />
+                  <TableColumn fx:id="tableKategoria" prefWidth="90.0" text="Kategoria" />
+                  <TableColumn fx:id="tableISBN" prefWidth="79.0" text="ISBN" />
+               </columns>
+            </TableView>
+            <TextField fx:id="Nazwa" promptText="Nazwa" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="Desc" prefHeight="46.0" prefWidth="197.0" promptText="Opis" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="Autor" promptText="Autor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="Add" mnemonicParsing="false" onAction="#dodaj" text="Dodaj " />
+                  <Button fx:id="edytuj" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#edytuj" text="Edytuj" GridPane.columnIndex="1" />
+                  <Button fx:id="Usuń" mnemonicParsing="false" onAction="#usun" text="Usuń" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <TextField fx:id="Filter" promptText="Filter" GridPane.rowIndex="1" />
+            <TextField fx:id="Kategoria" promptText="Kategoria" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="ISBN" promptText="ISBN" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button fx:id="Dodaj" mnemonicParsing="false" onAction="#ButtonZdjecie" text="Dodaj zdjecie" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ListView fx:id="Lista" depthTest="DISABLE" editable="true" prefHeight="32.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="showImage" fitHeight="122.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
