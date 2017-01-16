@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ProjektBiblioteka.jar" size="10150" download="eager" />
+    <jar href="ProjektBiblioteka.jar" size="10109" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.40-bin.jar" size="990927" download="eager" />
     <jar href="lib/sqlite-jdbc-3.15.1.jar" size="4369865" download="eager" />
   </resources>
